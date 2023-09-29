@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_escolha_oponente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/actor"
+        android:text="@string/jogada_oponente"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_jogada_player_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_escolha_oponente"
+        app:srcCompat="@drawable/padrao" />
+
+    <TextView
+        android:id="@+id/txt_resultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/actor"
+        android:text="@string/escolha"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_jogada_player_2" />
+
+    <ImageView
+        android:id="@+id/img_pedra"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:onClick="escolhaPedra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_resultado"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageView
+        android:id="@+id/img_papel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:onClick="escolhaPapel"
+        app:layout_constraintEnd_toStartOf="@+id/img_tesoura"
+        app:layout_constraintStart_toEndOf="@+id/img_pedra"
+        app:layout_constraintTop_toBottomOf="@+id/txt_resultado"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageView
+        android:id="@+id/img_tesoura"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="escolhaTesoura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_resultado"
+        app:srcCompat="@drawable/tesoura1" />
+
+    <ImageView
+        android:id="@+id/img_lagarto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="32dp"
+        android:onClick="escolhaLagarto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_pedra"
+        app:srcCompat="@drawable/lagarto" />
+
+    <ImageView
+        android:id="@+id/img_spock"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="55dp"
+        android:onClick="escolhaSpock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintStart_toEndOf="@+id/img_lagarto"
+        app:layout_constraintTop_toBottomOf="@+id/img_tesoura"
+        app:srcCompat="@drawable/vulcano" />
+
+    <TextView
+        android:id="@+id/txt_player_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/actor"
+        android:text="@string/player_1"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_lagarto" />
+
+    <TextView
+        android:id="@+id/txt_vs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/actor"
+        android:text="@string/vs"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/txt_player_2"
+        app:layout_constraintStart_toEndOf="@+id/txt_player_1"
+        app:layout_constraintTop_toBottomOf="@+id/img_lagarto" />
+
+    <TextView
+        android:id="@+id/txt_player_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/actor"
+        android:text="@string/player_2"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_spock" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

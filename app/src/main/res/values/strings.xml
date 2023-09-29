@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pedra Papel Tesoura Lagarto e Spock</string>
+    <string name="jogada_oponente">Escolha do Oponente</string>
+    <string name="escolha">Escolha uma Jogada</string>
+    <string name="player_1">Player 1  = </string>
+    <string name="player_2">  = Player 2</string>
+    <string name="vs">X</string>
+</resources>
